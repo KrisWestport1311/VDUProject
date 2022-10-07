@@ -1,14 +1,29 @@
 import "./sidebar.scss"
 
+import GridViewIcon from '@mui/icons-material/GridView';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import GroupIcon from '@mui/icons-material/Group';
+
 function Sidebar() {
   return (
     <div className="sidebar">
-        <div classname="top"><span classname="logo">Focus Safety</span></div>
-        <div classname="list">
+        <div className="top"><span className="logo">Focus Safety</span></div>
+        <hr />
+        <div className="list">
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+              <p className="title">Main</p>          
+                    <li>
+                    <GridViewIcon className="icon"/>
+                    <span>Dashboard</span></li>
+              <p className="title">List</p>     
+                    <li>
+                    <GroupIcon className="icon"/>
+                    <span>Users</span></li>
+              <p className="title">Admin</p>      
+                    <li>
+                    <ExitToAppIcon className="icon"/>
+                    <span>Log Out</span></li>
+                
             </ul>
         </div>
     </div>

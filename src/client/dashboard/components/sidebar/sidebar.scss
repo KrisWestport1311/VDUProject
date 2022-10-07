@@ -1,0 +1,76 @@
+.sidebar{
+    flex: 1;
+    border-right: 0.5px solid #ed192d;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+    
+
+    .top{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+
+        .logo{
+            font-size: 20px;
+            font-weight: 400;
+            color: #074993;
+        }
+        
+
+    }
+
+    hr{
+        height: 0;
+        border: 0.5px solid #ed192d;
+    }
+
+    .list{
+        padding-left: 15px;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+
+            .title {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #ed192d;
+                    margin-top: 25px;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+
+                    }
+
+            li {
+                   display: flex;
+                   align-items: center;
+                   padding: 5px;
+                   cursor: pointer;
+
+                   &:hover{
+                    background-color: #074993;
+                   }
+
+                   .icon{
+                    font-size: 18px;
+                    color:darkolivegreen;
+                    padding-right: 5px;
+
+                   }
+
+                   span{
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #ed192d;
+                   }
+                }
+        }
+
+       
+
+    }
+}
