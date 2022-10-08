@@ -6,6 +6,15 @@
 
     .homeContainer{
         flex: 6; /* https: //css-tricks.com/almanac/properties/f/flex/ */
+
+        .widget{
+            display: flex;
+            padding: 10px;
+            gap: 15px;
+
+        }    
+
+
     }
     
 }
