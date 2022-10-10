@@ -28,10 +28,10 @@
         }
 
         .link{
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 300;
             color: rgb(152,151,151);
-            border-bottom: 0.5px solid #074993;
+            border-bottom: 0.5px solid rgb(152, 151, 151);
             width:max-content;
         }
 
@@ -55,10 +55,10 @@
                 .icon {
                     font-size: 18px;
                     padding: 5px;
-                    background-color: #f22e2e;
-                    border-radius: 5px;
+                    background-color: #e0dfdf;
+                    border-radius: 7px;
                     align-self: flex-end;
-                    /*aligns item itself except all items*/
+                    /*aligns item itself and not all items at end of*/
                 }
     }
 }
