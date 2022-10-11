@@ -1,0 +1,49 @@
+:root   {
+            --primary-color: #5bb462; //global colour pallette to use through site
+            --primary-dark: #4f9c55;
+            --secondary-color: #ffea00;
+            --secondary-dark: #e3d002;
+            --overlay: rgba(0, 0, 0, .7);
+            --white: #fff;
+        }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul      {
+            list-style-type: none;
+        }
+
+a       {
+            text-decoration: none;
+            color:var(--primary-color)
+        }
+
+.button {
+            padding: 17px 28px;
+            font-size: 1.2rem;
+            color: var(--white);
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 4px 8px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: var(--primary-dark);
+                border: 1px solid var(--primary-dark);
+            }
+        }
+
+.line     {
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--primary-color);
+        }
+

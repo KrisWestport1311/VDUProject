@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Menubar from '../../components/Menubar/Menubar'
 function Home() {
   return (
-    <div>This is the front end Homepage</div>
+    <div><Menubar />
+    </div>
   )
 }
 
