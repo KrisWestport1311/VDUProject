@@ -1,16 +1,21 @@
 :root   {
-            --primary-color: #5bb462; //global colour pallette to use through site
-            --primary-dark: #4f9c55;
-            --secondary-color: #ffea00;
-            --secondary-dark: #e3d002;
+            --primary-blue: #2a5a86; //global colour pallette to use through site
+            --primary-teal: #238aa1;
+            --secondary-color: #EAF0CE;
+            --secondary-dark: #443850 ;
             --overlay: rgba(0, 0, 0, .7);
             --white: #fff;
         }
+
+.blue{
+    color: var(--primary-blue)
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 ul      {
@@ -19,25 +24,40 @@ ul      {
 
 a       {
             text-decoration: none;
-            color:var(--primary-color)
+            color:var(--primary-blue)
         }
 
-.button {
+h1 {
+    font-size: 3em;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+.btn {
             padding: 17px 28px;
             font-size: 1.2rem;
-            color: var(--white);
+            color: var(--secondary-dark);
             font-weight: 600;
             text-transform: uppercase;
-            background-color: var(--primary-color);
-            border: 1px solid var(--primary-color);
+            background-color: var(--primary-teal);
+            border: none;
             border-radius: 4px 8px;
             cursor: pointer;
 
             &:hover{
-                background-color: var(--primary-dark);
-                border: 1px solid var(--primary-dark);
+                background-color: var(--secondary-dark);
+                border: none;
+                color: var(--secondary-color);
             }
         }
+
+.btn-outline{
+    background: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue)
+}
 
 .line     {
             display: block;
@@ -46,4 +66,24 @@ a       {
             margin: 5px auto;
             background-color: var(--primary-color);
         }
+        
 
+@media screen and (max-width:940px) {
+    h1{
+        font-size: 2.5rem;        
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:495px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

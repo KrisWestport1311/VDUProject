@@ -1,48 +1,67 @@
-import {FaBars, FaTimes} from 'react-icons/fa'
 import React, {useState} from 'react'
-
-import './menubar.scss' 
-import '../../../../../src/index.scss'
-import logo from '../../../common/images/FSLOGO.png'
-
-
-
+import { NavLink } from 'react-router-dom'
+import {AiOutlineMenu, AiOutlineCloseCircle} from 'react-icons/ai'
+import '../../../../index.scss'
+import './menubar.scss'
 
 const Menubar = () => {
-
-const [click, setClick] = useState(false)
-
-const handleClick = () => setClick(!click)
+    const [click, setClick] = useState(false) //not active until we click it //
+    const handleClick =() => setClick(!click)
 
   return (
-    <div className="header">
-        <nav className='menubar'>
-            <a href='/' className='logo'>
-                <img src ={logo} alt='FSLogo' />            
-            </a>
-
-            <div className="hamburger" onClick={handleClick}>
-                {click ? (<FaTimes size={20} />) : <FaBars size={20} />}
-                
-            </div>
-
-            <ul className={click ? "navmenuactive" : "navmenu"}>
-                <li className='navitem'>
-                    <a href='/'>Home</a>
-                </li>
-                <li className='navitem'>
-                    <a href='/'>About Us</a>
-                </li>
-                <li className='navitem'>
-                    <a href='/'>Testimonials</a>
-                </li>
-                <li className='navitem'>
-                    <a href='/'>Demo</a>
-                </li>
+    <div className='menubar'>
+        <div className="container">
+            <h1 style={{marginLeft: '1rem', color: '#238aa1'}}>FocusSafety</h1>
+            <ul className={click ? 'nav active' : 'nav'}>
+              <li className='nav-item'>
+                  <NavLink
+                  to="/app"
+                  
+                  >
+                  Developer
+                  </NavLink>
+              </li>    
+              <li className='nav-item'>
+                  <NavLink
+                  to="/app"
+                  
+                  >
+                  Developer2
+                  </NavLink>
+              </li> 
+              <li className='nav-item'>
+                  <NavLink
+                  to="/app"
+                  
+                  >
+                  Developer3
+                  </NavLink>
+              </li> 
+              <li className='nav-item'>
+                  <NavLink
+                  to="/app"
+                  
+                  >
+                  Developer4
+                  </NavLink>
+              </li> 
+              <li className='nav-item'>
+                  <NavLink
+                  to="/app"
+                  className='btn'
+                  >
+                  Developer
+                  </NavLink>
+              </li>       
             </ul>
-        </nav>
-    
-    
+             <div onClick={handleClick}  className="hamburger">
+                {click ? (<AiOutlineCloseCircle  className='icon'/>) : (<AiOutlineMenu className='icon'/>)}
+                
+             </div>
+            
+            
+        
+        </div>    
     </div>
   )
 }

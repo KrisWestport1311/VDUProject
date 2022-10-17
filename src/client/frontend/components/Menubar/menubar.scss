@@ -1,114 +1,69 @@
-.header{
-    position: fixed;
-    height: 75px;
+.menubar {
+    background: #1c2237;
     width: 100%;
-    top:0;
-    left:0;
-    z-index: 1;
-    transition: .3s ease-in;
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.9);
+    height: 90px;
+    
+}
 
-    .menubar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1240px;
-        margin: auto;
-        height: 100&;
-        padding: 10px;   
-    }
+.menubar .container {
+    max-width: 1140px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    img{
-        width: 250px;
-        height:auto;
-    }
+.menubar .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .navmenu{
-        display: flex;
-    }
+.menubar li{
+    padding: 1rem;
+    text-transform: uppercase;
+}
 
-    .navitem{
-        padding: 10px;
-        font-weight: 500;
-    }
+.menubar .icon{
+    color: #f4eeff;
+    font-size: 2rem;
+}
 
-    .navitem{
-        &:hover{
-            padding-bottom: 5px;
-            border-bottom: 3px solid var(--secondary-color);
-        }
-    }
+.menubar h1,a{
+    color:#f4eeff
+
+}
 
 .hamburger{
-    display: none;
+    display:none;
 }
-
-}
-
 @media screen and (max-width:940px){
-    .header{
-        max-width: 100%;
-        background-color: rgba(0,0,0,0.9);
+    .hamburger{
+        display: block;
+        padding-right: 10px;
+    }
+
     
 
-    .menubar{
-        max-width: 100%;
-    }
-
-    .hamburger {
-        display: block;
-        color: var(--white);
-        
-    }
-
-    .navmenu{
-        position: fixed;
-        left: -100%;
-        top: 75px;
+    .nav {
+        position: absolute;
         flex-direction: column;
-        background-color: rgba(0,0,0,0.9);
+        justify-content: start !important;
+        top: 90px;
+        left: -100%;
         width: 100%;
         height: 100vh;
-        z-index: 999;
-        text-align: center;
-        transition: 0.3s;
-
-       
-
-        
-
-
-
-        .navitem{
-            margin: 1.5rem 0;
-        }
-
+        background-color: #1c2237 !important;
+        transition: 0.2sec;
     }
 
-        .navmenuactive {
-            position: fixed;
-            left: 00%;
-            top: 75px;
-            flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.9);
-            width: 100%;
-            height: 100vh;
-            z-index: 999;
-            text-align: center;
-            transition: 0.3s;}
+    .nav.active{
+        left:0
+    }
 
-    
+    .nav a{
+        font-size: 1.4rem;
 
-    img{
-        width: 195px;
-        height: auto;
-        padding-top: 10px;
-        }
-
-    
-}
-
-}
-
-
+    }
+} 
