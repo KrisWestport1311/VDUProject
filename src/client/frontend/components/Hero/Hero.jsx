@@ -9,7 +9,7 @@ const Hero = () => {
         </video>
 
         <div className="herotxt">
-          <h1>Absolute testing</h1>
+          <h1 style={{fontSize:'6rem', color: "#2a5a86"}}>Absolute testing</h1>
           <h1><span className="blue">Everyday</span></h1>
           <p>guaranteed testing results</p>
 
