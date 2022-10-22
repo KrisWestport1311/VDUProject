@@ -1,33 +1,68 @@
-import "./sidebar.scss"
+import React from 'react';
+import Logo from '../../../common/images/FSLOGOportrait.png'
+import './sidebar.scss'
+import {FiUsers, FiLogOut} from 'react-icons/fi'
+import {GoLocation} from 'react-icons/go'
+import {BsBookmarkCheck} from 'react-icons/bs'
+import {BsBook} from 'react-icons/bs'
+import {AiOutlineQuestionCircle} from 'react-icons/ai'
 
-import GridViewIcon from '@mui/icons-material/GridView';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import GroupIcon from '@mui/icons-material/Group';
 
-function Sidebar() {
+
+
+const Sidebar = () => {
   return (
-    <div className="sidebar">
-        <div className="top"><span className="logo">Focus Safety</span></div>
-        <hr />
-        <div className="list">
-            <ul>
-              <p className="title">Main</p>          
-                    <li>
-                    <GridViewIcon className="icon"/>
-                    <span>Dashboard</span></li>
-              <p className="title">List</p>     
-                    <li>
-                    <GroupIcon className="icon"/>
-                    <span>Users</span></li>
-              <p className="title">Admin</p>      
-                    <li>
-                    <ExitToAppIcon className="icon"/>
-                    <span>Log Out</span></li>
-                
-            </ul>
-        </div>
-    </div>
+    <div className="side_container">
+      <div className="top">
+      <div className='logo'>
+        <img src={Logo} alt="Focus Safety Logo"  className='logosize'/>
+      </div>
 
+      <div className="toggle"></div>
+      <div className="links">
+        <ul>
+          <li><a href="/">
+                <FiUsers />
+                <span> Users</span>
+              </a>
+          </li>
+
+          <li><a href="/">
+                <GoLocation />
+                <span> Locations</span>
+              </a>
+          </li>
+
+          <li><a href="/">
+                <BsBookmarkCheck />
+                <span> Assessments</span>
+              </a>
+          </li>
+
+          <li><a href="/">
+                <BsBook />
+                <span> Information</span>
+              </a>
+          </li>
+
+          <li><a href="/">
+                <AiOutlineQuestionCircle />
+                <span> FAQs</span>
+              </a>
+          </li>
+        
+        </ul>      
+      
+      </div>
+      <div className="logout">
+        <a href="/">
+          <FiLogOut /> 
+          <span className='logout'>Log Out</span>
+        </a>
+      </div>
+
+    </div>
+    </div>
   )
 }
 

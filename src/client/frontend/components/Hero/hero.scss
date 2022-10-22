@@ -4,7 +4,7 @@
     top:90px;
     object-fit: contain;
     color: #f4eeff;
-    background-color: #bebebe80;
+    background-color: var(--secondary-bright);
     
 }
 
@@ -33,3 +33,4 @@
 .hero .btn{
     margin: 1rem;
 }
+

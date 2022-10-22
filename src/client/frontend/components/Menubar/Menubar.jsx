@@ -3,15 +3,35 @@ import { NavLink } from 'react-router-dom'
 import {AiOutlineMenu, AiOutlineCloseCircle} from 'react-icons/ai'
 import '../../../../index.scss'
 import './menubar.scss'
+import Logo from '../../../common/images/FSLOGO.png'
+
+
+
 
 const Menubar = () => {
-    const [click, setClick] = useState(false) //not active until we click it //
+  const [fix, setFix] = useState(false)
+  
+  function setFixed(){
+    if (window.scrollY >= 400) {
+      setFix (true)
+    } else {
+      setFix (false)  
+    }
+
+  }
+
+  window.addEventListener("scroll", setFixed)
+
+
+
+  const [click, setClick] = useState(false) //not active until we click it //
     const handleClick =() => setClick(!click)
 
   return (
-    <div className='menubar'>
+    <div className={fix ? 'menubar fixed' : 'menubar'}>
         <div className="container">
-            <h1 style={{marginLeft: '1rem', color: '#238aa1'}}>FocusSafety</h1>
+            <img src={Logo} alt="Focus Safety Logo"  className='logosize'/>
+            
             <ul className={click ? 'nav active' : 'nav'}>
               <li className='nav-item'>
                   <NavLink
@@ -21,14 +41,7 @@ const Menubar = () => {
                   Developer
                   </NavLink>
               </li>    
-              <li className='nav-item'>
-                  <NavLink
-                  to="/app"
-                  
-                  >
-                  Developer2
-                  </NavLink>
-              </li> 
+             
               <li className='nav-item'>
                   <NavLink
                   to="/app"
@@ -50,7 +63,7 @@ const Menubar = () => {
                   to="/app"
                   className='btn'
                   >
-                  Developer
+                  Log In
                   </NavLink>
               </li>       
             </ul>

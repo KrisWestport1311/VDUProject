@@ -1,14 +1,16 @@
 :root   {
-            --primary-blue: #2a5a86; //global colour pallette to use through site
-            --primary-teal: #238aa1;
-            --secondary-color: #EAF0CE;
-            --secondary-dark: #443850 ;
+            --primary-main: #97C8EB; //global colour pallette to use through site
+            --primary-teal: #DDDBF1;
+            --secondary-color: #2A5A86;
+            --secondary-dark: #093A3E ;
+            --secondary-bright: #97c8ebb2;
             --overlay: rgba(0, 0, 0, .7);
             --white: #fff;
+            --background: #f5f7f8;
         }
 
-.blue{
-    color: var(--primary-blue)
+.main{
+    color: var(--white)
 }
 
 *{
@@ -27,35 +29,40 @@ a       {
             color:var(--primary-blue)
         }
 
+p{
+    color: var(--secondary-dark)
+}
+
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h2{
     font-size: 3rem;
+    color: var(--secondary-dark);
 }
 
 .btn {
             padding: 17px 28px;
             font-size: 1.2rem;
-            color: var(--secondary-dark);
+            color: var(--white);
             font-weight: 600;
-            text-transform: uppercase;
-            background-color: var(--primary-teal);
+            
+            background-color: var(--secondary-dark);
             border: none;
             border-radius: 4px 8px;
             cursor: pointer;
 
             &:hover{
-                background-color: var(--secondary-dark);
+                background-color: var(--primary-main);
                 border: none;
-                color: var(--secondary-color);
+                color: var(--white);
             }
         }
 
 .btn-outline{
     background: transparent;
-    border: 1px solid var(--primary-blue);
+    border: 1px solid var(--secondary-dark);
     color: var(--primary-blue)
 }
 
@@ -70,17 +77,18 @@ h2{
 
 @media screen and (max-width:940px) {
     h1{
-        font-size: 2.5rem;        
+        font-size: 3rem;        
     }
 
     h2{
         font-size: 2rem;
+        margin: 10px 0px;
     }
 }
 
 @media screen and (max-width:495px) {
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     h2 {

@@ -1,29 +1,4 @@
-.home{
-    
-    display: flex;
-    
-     
-
-    
-    
-
-
-
-    .homeContainer{
-        flex: 6; /* https: //css-tricks.com/almanac/properties/f/flex/ */
-
-        .widget, .charts{
-            display: flex;
-            padding: 10px;
-            gap: 15px;
-
-        } 
-        
-        .charts{
-            padding: 5px 15px;
-        }
-
-
-    }
-    
+.dashboard{
+    background-color: #fff;
 }
+

@@ -1,18 +1,20 @@
 import React from 'react'
 import './infoarea.scss'
-import VDU from '../../components/images/VDU.png'
+import Img5 from '../../../common/images/Image5.png'
 
 const Infoarea = () => {
   return (
     <div className='infoarea'>
         <div className="container">
         <div className="left">
-            <h2>Digital platform of choice for smart professionals</h2>
-            <p>An end-to-end service available <span className='blue'> ‘on demand’ </span>for employees in any work Location (s) at a time convenient to them. A simple and connected experience, for digital risk assessments, employee reports, recommended e-learning, live diary to assessor diaries for follow-up expert consultations (based risk score) and live Employer analytics and reporting.</p>
+            <h2>Digital platform of choice for smart professionals</h2><br/>
+            <p>Reporting and analytics across your employee base with a breakdown of data across each category. Employers will have real-time access to their reporting and analytics dashboard providing the ability to deep dive into any demographic,  Department or risk category . Over time, you will see the history & trends of your employees.  
+
+You will have a dedicated customer success executive for continued and extensive support.</p>
         </div>
         <div className="right">
             <div className='imgcontainer'>
-                <img src={VDU} alt="VDU assessments from Focus Safety" />
+                <img src={Img5} alt="VDU assessments from Focus Safety" style={{color:"var(--white)"}}/>
             </div>
         </div>
         </div>

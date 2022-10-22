@@ -1,8 +1,21 @@
 .menubar {
-    background: #1c2237;
+    background: var(--secondary-bright);
     width: 100%;
     height: 90px;
+    border-bottom: 5px solid var(--primary-main);
     
+}
+
+.menubar .fixed{
+    background-color: var(--white);
+    transition: .3s ease-in;
+    
+}
+
+.menubar .logosize{
+    width: auto;
+    height: 45px;
+    padding-left: 15px;
 }
 
 .menubar .container {
@@ -20,20 +33,25 @@
     align-items: center;
 }
 
+
+
 .menubar li{
     padding: 1rem;
-    text-transform: uppercase;
+    
 }
 
 .menubar .icon{
-    color: #f4eeff;
+    color: var(--white);
     font-size: 2rem;
 }
 
 .menubar h1,a{
-    color:#f4eeff
+    color:var(--secondary-dark)
 
 }
+
+
+
 
 .hamburger{
     display:none;
@@ -43,6 +61,12 @@
         display: block;
         padding-right: 10px;
     }
+
+.menubar .logosize {
+    width: 250px;
+    height: auto;
+    
+}
 
     
 
@@ -54,7 +78,7 @@
         left: -100%;
         width: 100%;
         height: 100vh;
-        background-color: #1c2237 !important;
+        background-color: var(--secondary-bright) !important;
         transition: 0.2sec;
     }
 

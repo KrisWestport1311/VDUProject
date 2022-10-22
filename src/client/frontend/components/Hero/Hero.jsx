@@ -9,14 +9,14 @@ const Hero = () => {
         </video>
 
         <div className="herotxt">
-          <h1 style={{fontSize:'6rem', color: "#2a5a86"}}>Absolute testing</h1>
-          <h1><span className="blue">Everyday</span></h1>
-          <p>guaranteed testing results</p>
+          <h1 style={{color: "var(--secondary-dark)"}}>Digital Workstation Assessments</h1>
+          <h2 style={{color: "var(--white)"}}>Remote Assessment Solution</h2>
+          
 
           <div className="btn-group">
-            <button className="btn">Use Focus Safety</button>
+            <button className="btn">Log In</button>
             
-            <button className="btn btn-outline">Contact Us</button>          
+            <button className="btn btn-outline">Send a Message</button>          
           </div>
         </div>
         
