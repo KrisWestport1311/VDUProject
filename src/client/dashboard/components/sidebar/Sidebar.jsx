@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Logo from '../../../common/images/FSLOGOportrait.png'
 import './sidebar.scss'
 import {FiUsers, FiLogOut} from 'react-icons/fi'
@@ -11,6 +11,9 @@ import {AiOutlineQuestionCircle} from 'react-icons/ai'
 
 
 const Sidebar = () => {
+
+  const [currentLink, setCurrentLink] = useState (1);
+
   return (
     <div className="side_container">
       <div className="top">
@@ -21,45 +24,69 @@ const Sidebar = () => {
       <div className="toggle"></div>
       <div className="links">
         <ul>
-          <li><a href="/">
+          <li 
+          className = {currentLink === 1 ? "active" : ""}
+          onClick = {() => setCurrentLink(1)}
+          >
+          <a href="#">
                 <FiUsers />
                 <span> Users</span>
               </a>
           </li>
 
-          <li><a href="/">
+          <li 
+          className = {currentLink ===2 ? "active" : ""}
+          onClick = {() => setCurrentLink(2)}
+          >
+          <a href="#">
                 <GoLocation />
                 <span> Locations</span>
               </a>
           </li>
 
-          <li><a href="/">
+          <li
+          className = {currentLink ===3 ? "active" : ""} 
+          onClick = {() =>setCurrentLink(3)}
+          >
+          <a href="#">
                 <BsBookmarkCheck />
                 <span> Assessments</span>
               </a>
           </li>
 
-          <li><a href="/">
+          <li 
+          className = {currentLink ===4 ? "active" : ""}
+          onClick = {() => setCurrentLink(4)}
+          >
+          <a href="#">
                 <BsBook />
                 <span> Information</span>
               </a>
           </li>
 
-          <li><a href="/">
+          <li
+          className = {currentLink ===5 ? "active" : ""} 
+          onClick = {() => setCurrentLink(5)}
+          >
+          <a href="#">
                 <AiOutlineQuestionCircle />
                 <span> FAQs</span>
               </a>
+          </li>
+
+          <li className="logout">
+          
+        <a href="/">
+          <FiLogOut /> 
+          <span >Log Out</span>
+        </a>
+      
           </li>
         
         </ul>      
       
       </div>
-      <div className="logout">
-        <a href="/">
-          <FiLogOut /> 
-          <span className='logout'>Log Out</span>
-        </a>
-      </div>
+     
 
     </div>
     </div>

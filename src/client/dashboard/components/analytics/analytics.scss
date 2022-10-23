@@ -1,0 +1,50 @@
+.analytics_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.analytic_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 8px 4px;
+    background-color: var(--background);
+    margin: 0.15rem;
+
+    &:hover{
+        background-color: var(--primary-teal);    
+        
+    }
+}
+
+.analytic_card h3{
+    color: var(--secondary-dark);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.analytic_card p {
+    color: var(--secondary-dark);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.ac_right .ac_icon_container{
+    background-color: var(--secondary-bright);
+    border-radius: 50px;
+    display: inline-flex;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+
+    
+}
+
+
+
+
+

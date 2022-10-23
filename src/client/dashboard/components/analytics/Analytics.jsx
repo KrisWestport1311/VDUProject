@@ -1,8 +1,35 @@
-import React from 'react'
+import './analytics.scss'
+import {BsFillBarChartFill, BsFillGeoFill, BsFillPersonFill, BsCalendar3} from 'react-icons/bs';
+import Analyticscard from '../analyticscard/Analyticscard'
 
 const Analytics = () => {
   return (
-    <div>Analytics</div>
+    <div className="analytics_container">
+      
+        <div> 
+        <Analyticscard 
+        heading='Assessments this month'
+        value='€24' 
+        icon={<BsFillBarChartFill/>}/></div>
+
+        <div> <Analyticscard 
+        heading='Locations this month'
+        value='25' 
+        icon={<BsFillGeoFill/>}/></div>
+
+        <div> <Analyticscard 
+        heading='Users in total'
+        value='24' 
+        icon={<BsFillPersonFill/>}/></div>
+
+        <div> <Analyticscard 
+        heading='Follow Ups'
+        value='25' 
+        icon={<BsCalendar3/>}/></div>
+
+      
+
+    </div>
   )
 }
 

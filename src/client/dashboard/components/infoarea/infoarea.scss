@@ -1,0 +1,36 @@
+.infoarea_container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.title .h1_small {
+    font-size: 1rem;
+}
+
+.title .logosize {
+    width: 17vh;
+    height: auto;
+    gap: 1rem;    
+}
+
+.search{
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    padding: 1rem 5rem 1rem 1rem;
+    border-radius: 8px 4px;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    &::placeholder{
+        color: var(--secondary-dark);
+    }
+    &:focus{
+        outline:none;
+    }
+}
+
