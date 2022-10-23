@@ -49,7 +49,7 @@ const About = () => {
               alt="image1"
               style={{width:"150px", height:"auto"}}
               />
-                <AboutCard heading='Who is it for?' text='Employers are required to undertake VDU Assessments on workstations where an employee will spend >1 hour per day.'/>
+                <AboutCard heading='Who is it for?' text='Employers must undertake VDU assessments on workstations where an employee will spend >1 hour a day.'/>
                 </div>
 
                 

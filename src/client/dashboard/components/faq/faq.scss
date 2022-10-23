@@ -1,0 +1,53 @@
+.faq_container{
+    background-color: var(--background);
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 8px 4px;
+    margin: 0.15rem;
+}
+
+.title h2{
+    font-size: 1.05rem;
+}
+
+.faqs{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin-top: 1.5rem;
+    color: var(--secondary-dark);
+
+    
+     
+
+    .faq{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+
+        .info{
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+             
+            
+                     
+        }
+        svg{
+            font-size: 1.5rem;
+            color: var(--primary-main)
+        }
+
+        h4{
+            color: var(--primary-main);
+            margin: 0 0 0 10px;
+            font-size: medium;
+
+            &:hover {
+                    color: var(--secondary-dark)
+                }
+            
+        }
+    }
+}

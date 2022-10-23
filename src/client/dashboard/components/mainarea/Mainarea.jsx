@@ -1,10 +1,10 @@
 import React from 'react'
 import Analytics from "../analytics/Analytics"
 import Faq from "../faq/Faq"
-import Locations from "../locations/Locations"
-import Assessor from "../assessor/Assessor"
 import Inforarea from '../infoarea/Inforarea'
-import Followups from '../followups/Followups'
+import Assessmenttypes from '../../components/charts/assessmenttypes/Assessmenttypes'
+import Equipment from '../../components/charts/equipment/Equipment'
+import Discomfort from '../../components/charts/discomfort/Discomfort'
 
 import './mainarea.scss'
 
@@ -20,9 +20,9 @@ const Mainarea = () => {
             </div>
             
             <div className="row_two">
-                <Locations/>
-                <Assessor /> 
-                <Followups />
+                <Assessmenttypes />
+                <Assessmenttypes />
+                <Assessmenttypes />
             </div>
     
     

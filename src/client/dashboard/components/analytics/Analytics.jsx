@@ -9,7 +9,7 @@ const Analytics = () => {
         <div> 
         <Analyticscard 
         heading='Assessments this month'
-        value='€24' 
+        value='24' 
         icon={<BsFillBarChartFill/>}/></div>
 
         <div> <Analyticscard 
@@ -19,12 +19,12 @@ const Analytics = () => {
 
         <div> <Analyticscard 
         heading='Users in total'
-        value='24' 
+        value='324' 
         icon={<BsFillPersonFill/>}/></div>
 
         <div> <Analyticscard 
         heading='Follow Ups'
-        value='25' 
+        value='2565' 
         icon={<BsCalendar3/>}/></div>
 
       

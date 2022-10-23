@@ -4,6 +4,7 @@
             --secondary-color: #2A5A86;
             --secondary-dark: #093A3E ;
             --secondary-bright: #97c8ebb2;
+            --secondary-background: #97c8eb40;
             --overlay: rgba(0, 0, 0, .7);
             --white: #fff;
             --background: #f5f7f8;
@@ -46,7 +47,7 @@ h2{
 
 .btn {
             padding: 17px 28px;
-            font-size: 1.2rem;
+            font-size: 1.0rem;
             color: var(--white);
             font-weight: 600;
             
@@ -58,13 +59,13 @@ h2{
             &:hover{
                 background-color: var(--primary-main);
                 border: none;
-                color: var(--white);
+                color: var(--secondary-dark);
             }
         }
 
 .btn-outline{
-    background: transparent;
-    border: 1px solid var(--secondary-dark);
+    background: var(--secondary-color);
+    
     color: var(--primary-blue)
 }
 

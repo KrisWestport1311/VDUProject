@@ -34,15 +34,6 @@ const Sidebar = () => {
               </a>
           </li>
 
-          <li 
-          className = {currentLink ===2 ? "active" : ""}
-          onClick = {() => setCurrentLink(2)}
-          >
-          <a href="#">
-                <GoLocation />
-                <span> Locations</span>
-              </a>
-          </li>
 
           <li
           className = {currentLink ===3 ? "active" : ""} 
@@ -53,6 +44,18 @@ const Sidebar = () => {
                 <span> Assessments</span>
               </a>
           </li>
+          
+          <li 
+          className = {currentLink ===2 ? "active" : ""}
+          onClick = {() => setCurrentLink(2)}
+          >
+          <a href="#">
+                <GoLocation />
+                <span> Locations</span>
+              </a>
+          </li>
+
+          
 
           <li 
           className = {currentLink ===4 ? "active" : ""}

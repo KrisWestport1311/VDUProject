@@ -10,6 +10,7 @@
     justify-content: space-between;
     padding: 2rem 0;
     gap: 2rem;
+    border-right: 5px solid var(--primary-main);
 }
 
 .top{
@@ -38,7 +39,8 @@
 
 span{
     font-size: 1rem;
-    color: var(--secondary-dark)
+    color: var(--secondary-dark);
+    font-weight: bold;
 
 }
 
