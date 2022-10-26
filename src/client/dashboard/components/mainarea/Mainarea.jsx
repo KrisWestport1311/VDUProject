@@ -21,8 +21,8 @@ const Mainarea = () => {
             
             <div className="row_two">
                 <Assessmenttypes />
-                <Assessmenttypes />
-                <Assessmenttypes />
+                <Equipment />
+                <Discomfort />
             </div>
     
     
