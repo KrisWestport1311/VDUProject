@@ -92,6 +92,10 @@ const Sidebar = () => {
      
 
     </div>
+    <div className="responsive_nav">
+        
+    
+    </div>
     </div>
   )
 }

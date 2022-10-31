@@ -4,6 +4,7 @@ import DashboardHome from "./client/dashboard/pages/Dashboardhome/DashboardHome"
 import Users from "./client/dashboard/pages/users/Users";
 import Home from "./client/frontend/pages/Home/Home";
 import Login from "./client/frontend/pages/login/Login";
+import Register from "./client/frontend/pages/register/Register";
 
 
 
@@ -19,6 +20,8 @@ function App() {
                 <Route path="app" element={<DashboardHome/>} />
                 <Route path="login" element={<Login/>} />
                 <Route path ="users" element={<Users/>} />
+                <Route path ="register" element={<Register/>} />
+                
           
         </Route>
       </Routes>

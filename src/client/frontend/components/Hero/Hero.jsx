@@ -1,6 +1,6 @@
 import './hero.scss'
 import HeroVideo from '../../../common/video.mp4'
-
+import { NavLink } from 'react-router-dom'
 const Hero = () => {
   return (
     <div className='hero'>
@@ -14,9 +14,15 @@ const Hero = () => {
           
 
           <div className="btn-group">
-            <button className="btn">Log In</button>
             
-            <button className="btn btn-outline">Send a Message</button>          
+            
+            <NavLink 
+            to="/login" 
+            className="btn">Log In </NavLink> 
+                     
+            <NavLink 
+            to="/app" 
+            className="btn btn-outline">Send a Message </NavLink>          
           </div>
         </div>
         

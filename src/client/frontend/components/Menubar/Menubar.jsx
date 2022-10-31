@@ -55,7 +55,7 @@ const Menubar = () => {
                   to="/app"
                   
                   >
-                  Developer4
+                  SIGN UP
                   </NavLink>
               </li> 
               <li className='nav-item'>
