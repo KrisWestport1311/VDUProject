@@ -27,3 +27,16 @@
     }
 
 }
+
+@media screen and (min-width:280px) and (max-width:1140px){
+    .mainarea_container{
+        margin-left: 0;
+        
+        .grid{
+            .row_one,
+            .row_two{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

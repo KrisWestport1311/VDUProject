@@ -9,18 +9,7 @@ import Logo from '../../../common/images/FSLOGO.png'
 
 
 const Menubar = () => {
-  const [fix, setFix] = useState(false)
   
-  function setFixed(){
-    if (window.scrollY >= 400) {
-      setFix (true)
-    } else {
-      setFix (false)  
-    }
-
-  }
-
-  window.addEventListener("scroll", setFixed)
 
 
 
@@ -28,7 +17,7 @@ const Menubar = () => {
     const handleClick =() => setClick(!click)
 
   return (
-    <div className={fix ? 'menubar fixed' : 'menubar'}>
+    <div className='menubar'>
         <div className="container">
             <img src={Logo} alt="Focus Safety Logo"  className='logosize'/>
             

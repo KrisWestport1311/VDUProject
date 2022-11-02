@@ -34,3 +34,29 @@ input{
     }
 }
 
+@media screen and (min-width: 280px) and (max-width:1140px){
+    .infoarea_container{
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title{
+            h4{
+                font-size:1.2rem
+            }
+            .h1_small{
+                font-size: 1.2rem;
+            }
+
+            .logosize{
+                width: 150px;
+                height: auto;
+            }
+        }
+
+        .search{
+            margin-top: 1rem;
+        }
+
+    }
+}
+

@@ -45,6 +45,10 @@
 }
 
 
+@media screen and (min-width:280px) and (max-width: 1140px){
+    .analytics_container{
+        grid-template-columns: repeat(auto-fill, moinmax(220px,1fr));
+}
 
 
-
+}
