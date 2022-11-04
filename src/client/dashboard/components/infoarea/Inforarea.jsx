@@ -8,8 +8,8 @@ const Inforarea = () => {
   return (
    <div className='infoarea_container'>
     <div className='title'>
-        <h4>Hi Kristian</h4>
-        <h1 className='h1_small'>Welcome to <img src={Logo} alt="Focus Safety Logo"  className='logosize'/></h1>
+        <h4>Hi Kristian, welcome to </h4>
+         <img src={Logo} alt="Focus Safety Logo"  className='logosize'/>
     </div>
 
     <div className="search">

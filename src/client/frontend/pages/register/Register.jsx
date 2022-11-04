@@ -12,7 +12,7 @@ export default function Register() {
       <form className="registerform">
       <span className="registertitle">Register New User</span>
         <label>Username</label> 
-        <input type="text" placeholder="Enter your username" minlength="7" required/>
+        <input type="text" placeholder="Enter your username" minLength="7" required/>
         <label>E-mail</label> 
         <input type="email" placeholder="Enter your e-mail address" required/> 
         <label>Password</label> 
