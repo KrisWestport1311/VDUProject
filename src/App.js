@@ -5,7 +5,7 @@ import Users from "./client/dashboard/pages/users/Users";
 import Home from "./client/frontend/pages/Home/Home";
 import Login from "./client/frontend/pages/login/Login";
 import Register from "./client/frontend/pages/register/Register";
-
+import Locationsform from "./client/dashboard/components/locationsform/Locationsform";
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
                 <Route path="login" element={<Login/>} />
                 <Route path ="users" element={<Users/>} />
                 <Route path ="register" element={<Register/>} />
+                <Route path ="locationsform" element={<Locationsform/>} />
                 
           
         </Route>
