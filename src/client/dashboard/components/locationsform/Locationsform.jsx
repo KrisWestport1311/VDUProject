@@ -1,9 +1,11 @@
 import "./locationsform.scss"
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from "react";
+import axios from "axios"
 
 export default function Login() {
 
+  
   const initialValues= {name:"", address:"",county:"",contactperson:"",title:"",phonenumber:"",emailaddress:""}   //manage state of fields, initially set to empty objects
   
   const[formValues, setFormValues]= useState(initialValues); //create state 
@@ -24,6 +26,8 @@ export default function Login() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    axios.post("http://localhost:5000/api/locations", formValues)
+    
   }
 
 
@@ -68,7 +72,11 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
     <div className="login">
      
 
-      <form className="loginform" onSubmit={handleSubmit}>
+      <form 
+        className="loginform" 
+        method="POST"
+        action="/api/locations"
+        onSubmit={handleSubmit}>
        {Object.keys(formErrors).length === 0 && isSubmit ? 
         (<span className="logintitle">New Location Created</span>) : 
         (<span className="logintitle">Create New Location</span>)}

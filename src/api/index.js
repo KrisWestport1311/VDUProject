@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
@@ -11,11 +12,13 @@ dotenv.config();
 
 mongoose
 .connect(process.env.MONGO_URL)
-.then(console.log("Connected to our Mongo_DB"))
+.then(console.log("Connected to our Mongo_Atlas_DB"))
 .catch((err) => console.log(err));
 
 //middlewares
+app.use(cors())
 app.use(express.json()); //so you can send json object to express server
+app.use(express.urlencoded({extended:true}))
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
