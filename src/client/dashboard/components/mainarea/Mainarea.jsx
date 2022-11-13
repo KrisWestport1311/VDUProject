@@ -5,7 +5,7 @@ import Inforarea from '../infoarea/Inforarea'
 import Assessmenttypes from '../../components/charts/assessmenttypes/Assessmenttypes'
 import Equipment from '../../components/charts/equipment/Equipment'
 import Discomfort from '../../components/charts/discomfort/Discomfort'
-import Test from '../../components/charts/test/Test'
+
 
 import './mainarea.scss'
 

@@ -24,7 +24,7 @@ const Menubar = () => {
             <ul className={click ? 'nav active' : 'nav'}>
               <li className='nav-item'>
                   <NavLink
-                  to="/app"
+                  to="/app/mainarea"
                   
                   >
                   Developer
@@ -33,7 +33,7 @@ const Menubar = () => {
              
               <li className='nav-item'>
                   <NavLink
-                  to="/app"
+                  to="/app/mainarea"
                   
                   >
                   Developer3
@@ -41,7 +41,7 @@ const Menubar = () => {
               </li> 
               <li className='nav-item'>
                   <NavLink
-                  to="/app"
+                  to="/app/mainarea"
                   
                   >
                   SIGN UP
@@ -49,7 +49,7 @@ const Menubar = () => {
               </li> 
               <li className='nav-item'>
                   <NavLink
-                  to="/app"
+                  to="/app/mainarea"
                   className='btn'
                   >
                   Log In

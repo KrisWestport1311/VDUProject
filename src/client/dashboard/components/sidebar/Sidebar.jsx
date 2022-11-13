@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../../common/images/FSLOGOportrait.png'
 import './sidebar.scss'
 import {FiUsers, FiLogOut} from 'react-icons/fi'
@@ -32,10 +33,10 @@ const Sidebar = () => {
           className = {currentLink === 1 ? "active" : ""}
           onClick = {() => setCurrentLink(1)}
           >
-          <a href="/app">
+          <Link to="/app/mainarea">
                 <FiUsers />
                 <span> Users</span>
-              </a>
+              </Link>
           </li>
 
 
@@ -43,10 +44,10 @@ const Sidebar = () => {
           className = {currentLink ===3 ? "active" : ""} 
           onClick = {() =>setCurrentLink(3)}
           >
-          <a href="/app">
+          <Link to="/app/assessments">
                 <BsBookmarkCheck />
                 <span> Assessments</span>
-              </a>
+              </Link>
           </li>
           
           <li 
