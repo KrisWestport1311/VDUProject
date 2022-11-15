@@ -3,6 +3,23 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt")
 
 
+
+
+//Get all users
+router.get("/", async (req, res, next) =>{
+
+        
+    
+    try {
+        const users = await User.find();
+        res.status(200).json(users)
+
+    } catch(err){
+        next(err)
+    }
+
+});
+
 //Update existing user
 router.put("/:id", async (req,res) =>{
     if(req.body.userId === req.params.id){
@@ -28,7 +45,7 @@ router.put("/:id", async (req,res) =>{
     }
 });
 
-//Delete user
+//Delete existing user
 
 router.delete("/:id", async (req,res) =>{
     if(req.body.userId === req.params.id){
@@ -51,7 +68,7 @@ router.delete("/:id", async (req,res) =>{
 });
 
 
-//Get a User
+//Get a Specific User
 
 router.get("/:Id", async (req, res) =>{
     try{

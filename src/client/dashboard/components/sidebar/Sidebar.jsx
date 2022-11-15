@@ -6,9 +6,8 @@ import {FiUsers, FiLogOut} from 'react-icons/fi'
 import {GoLocation} from 'react-icons/go'
 import {BsBookmarkCheck} from 'react-icons/bs'
 import {BsBook} from 'react-icons/bs'
-import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {AiOutlineMenu, AiOutlineCloseCircle} from 'react-icons/ai'
-
+import {BiBarChartSquare} from "react-icons/bi";
 
 
 
@@ -34,6 +33,16 @@ const Sidebar = () => {
           onClick = {() => setCurrentLink(1)}
           >
           <Link to="/app/mainarea">
+                <BiBarChartSquare />
+                <span> Dashboard</span>
+              </Link>
+          </li>
+
+          <li 
+          className = {currentLink === 2 ? "active" : ""}
+          onClick = {() => setCurrentLink(2)}
+          >
+          <Link to="/app/userslist">
                 <FiUsers />
                 <span> Users</span>
               </Link>
@@ -51,36 +60,28 @@ const Sidebar = () => {
           </li>
           
           <li 
-          className = {currentLink ===2 ? "active" : ""}
-          onClick = {() => setCurrentLink(2)}
+          className = {currentLink ===4 ? "active" : ""}
+          onClick = {() => setCurrentLink(4)}
           >
-          <a href="/app">
+          <Link to ="/app/locations">
                 <GoLocation />
                 <span> Locations</span>
-              </a>
+              </Link>
           </li>
 
           
 
           <li 
-          className = {currentLink ===4 ? "active" : ""}
-          onClick = {() => setCurrentLink(4)}
-          >
-          <a href="#">
-                <BsBook />
-                <span> Information</span>
-              </a>
-          </li>
-
-          <li
-          className = {currentLink ===5 ? "active" : ""} 
+          className = {currentLink ===5 ? "active" : ""}
           onClick = {() => setCurrentLink(5)}
           >
-          <a href="/app">
-                <AiOutlineQuestionCircle />
-                <span> FAQs</span>
-              </a>
+          <Link to="/app/information">
+                <BsBook />
+                <span> Information</span>
+              </Link>
           </li>
+
+         
 
           <li className="logout">
           

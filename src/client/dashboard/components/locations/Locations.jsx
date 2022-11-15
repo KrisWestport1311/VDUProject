@@ -1,8 +1,8 @@
-import React from 'react'
+import './locations.scss'
 
 const Locations = () => {
   return (
-    <div>Locations</div>
+    <div className='locations_container'>Locations</div>
   )
 }
 
