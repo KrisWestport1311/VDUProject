@@ -2,12 +2,14 @@ import "./locationsform.scss"
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from "react";
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
 
   
   const initialValues= {name:"", address:"",county:"",contactperson:"",title:"",phonenumber:"",emailaddress:""}   //manage state of fields, initially set to empty objects
-  
+  const navigate = useNavigate();
+
   const[formValues, setFormValues]= useState(initialValues); //create state 
 
   const[formErrors, setFormErrors]= useState({}); //create state for errors with initial state set to empty (nothing between the {})
@@ -27,6 +29,7 @@ export default function Login() {
     setFormErrors(validate(formValues));
     setIsSubmit(true);
     axios.post("http://localhost:5000/api/locations", formValues)
+    navigate("/app/locations");
     
   }
 

@@ -2,9 +2,16 @@ import React, {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios"
 import './userslist.scss' ;
+import {VscAdd} from 'react-icons/vsc'
+import {TbEdit} from 'react-icons/tb'
+import {MdDeleteOutline} from 'react-icons/md'
+import {AiOutlineSearch} from 'react-icons/ai'
 
 
 function Userslist() {
+
+  const [query, setQuery] = useState("");
+  
 
   const [users,setUser] = useState([]); //setUser to empty array
 
@@ -27,23 +34,63 @@ function Userslist() {
 
   return (
     <div className='users_container'>
+    
+    <div className="user_title">
+    
+      <div>USERLIST</div>
+
+      <div className="user_search">
+        <AiOutlineSearch style={{color:"var(--secondary-dark)"}}/>
+        <input
+          type="text"
+          placeholder="Search by User Name"
+          onChange={(e) => setQuery(e.target.value)}
+          />
+        
+    </div>
+
+    
+
+    <div className="add_user">
+    <Link to="/app/adduser" title="Add New User" >
+        <VscAdd className="userlist_icon"/>
+        </Link>
+    </div>
+    
+    </div>
+
     <table className='table'>
       <thead>
       <tr>
+      
+      
         <th>No</th>
         <th>Username</th>
         <th>Email address</th>
+        <th>Action</th>
+        
        </tr> 
       </thead>
       <tbody>
-      {users.map((user, index)=>(
+      {users.filter((user)=>
+        user.username.toLowerCase().includes(query))
+        .map((user, index)=>(
           <tr key={user._id}>
-          <td>{index + 1}</td>
-          <td width="20%">{user.username}</td>
-          <td width="30%">{user.email}</td>
-          <td className="btn-group" width="20%">
-            <button className="btn btn-outline">Edit</button>
-            <button className="btn">Delete</button>
+          
+          <td>{user._id}</td>
+          <td>{user.username}</td>
+          <td>{user.email}</td>
+          
+          <td>
+            <Link
+            to={`/app/edituser/${user._id}`} 
+            title="Edit user"><TbEdit/>
+            </Link>
+            <Link
+            to={`/app/edituser/${user._id}`} 
+            title="Delete user"><MdDeleteOutline/>
+            </Link>
+            
           </td>
         </tr>
       ))}
@@ -58,7 +105,7 @@ function Userslist() {
                 
                 <button className="btn btn-outline">Add New User</button>
               </Link>
-          
+         
     </div>
     
   )

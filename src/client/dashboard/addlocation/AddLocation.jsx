@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-export default function AddUSer() {
+export default function AddLocation() {
 
   
   const initialValues= {username:"", email:"", password:""}   //manage state of fields, initially set to empty objects
@@ -30,7 +30,7 @@ export default function AddUSer() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    axios.post("http://localhost:5000/api/auth/register", formValues);
+    axios.post("http://localhost:5000/api/locations", formValues);
     navigate("/app/userslist");
     
   }
@@ -105,7 +105,7 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
 
         
 
-        <button className="login_btn">Save New User</button>   
+        <button className="login_btn">Save New Lcoation</button>   
          
       </form>
         

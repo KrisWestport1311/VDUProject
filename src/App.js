@@ -12,6 +12,8 @@ import Locations from "./client/dashboard/components/locations/Locations";
 import Information from "./client/dashboard/components/information/Information";
 import Userslist from "./client/dashboard/components/userslist/Userslist";
 import AddUser from "./client/dashboard/components/adduser/AddUser";
+import EditUser from "./client/dashboard/components/edituser/EditUser";
+
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
                 <Route path="login" element={<Login/>} />
                 <Route path ="users" element={<Users/>} />
                 <Route path ="register" element={<Register/>} />
-                <Route path ="locationsform" element={<Locationsform/>} />
+                
                 
                 {/*start of nested route */}    
                 <Route path="app" element={<DashboardHome/>} >
@@ -33,8 +35,10 @@ function App() {
                       <Route path ="userslist" element ={<Userslist/>}/>
                       <Route path ="assessments" element ={<Assessments/>}/>
                       <Route path ="adduser" element ={<AddUser/>}/>
+                      <Route path ="edituser/:id" element ={<EditUser/>}/>
                       <Route path ="locations" element ={<Locations/>}/>
                       <Route path ="information" element ={<Information/>}/>
+                      <Route path ="locationsform" element={<Locationsform/>} />
                 </Route>
                 
                 {/*end of nested route */}

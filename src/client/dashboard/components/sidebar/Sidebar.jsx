@@ -13,7 +13,7 @@ import {BiBarChartSquare} from "react-icons/bi";
 
 const Sidebar = () => {
 
-  const [currentLink, setCurrentLink] = useState (1);
+  const [currentLink, setCurrentLink] = useState ();
   const [navbarState, setNavbarState] = useState(false);
   const handleClick =() => setNavbarState(!navbarState)
 
