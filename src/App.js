@@ -6,13 +6,14 @@ import Home from "./client/frontend/pages/Home/Home";
 import Login from "./client/frontend/pages/login/Login";
 import Register from "./client/frontend/pages/register/Register";
 import Locationsform from "./client/dashboard/components/locationsform/Locationsform";
-import Assessments from "./client/dashboard/components/assessments/Assessments";
+import AssessmentTypes from "./client/dashboard/components/assessments/AssessmentTypes";
 import Mainarea from "./client/dashboard/components/mainarea/Mainarea";
 import Locations from "./client/dashboard/components/locations/Locations";
 import Information from "./client/dashboard/components/information/Information";
 import Userslist from "./client/dashboard/components/userslist/Userslist";
 import AddUser from "./client/dashboard/components/adduser/AddUser";
 import EditUser from "./client/dashboard/components/edituser/EditUser";
+import VDUAssessmentForm from "./client/dashboard/components/assessments/VDUAssessmentForm";
 
 
 
@@ -27,13 +28,14 @@ function App() {
                 <Route path="login" element={<Login/>} />
                 <Route path ="users" element={<Users/>} />
                 <Route path ="register" element={<Register/>} />
+                <Route path ="vduassessment" element={<VDUAssessmentForm/>} />
                 
                 
                 {/*start of nested route */}    
                 <Route path="app" element={<DashboardHome/>} >
                       <Route path ="mainarea" element ={<Mainarea/>}/>
                       <Route path ="userslist" element ={<Userslist/>}/>
-                      <Route path ="assessments" element ={<Assessments/>}/>
+                      <Route path ="assessmenttypes" element ={<AssessmentTypes/>}/>
                       <Route path ="adduser" element ={<AddUser/>}/>
                       <Route path ="edituser/:id" element ={<EditUser/>}/>
                       <Route path ="locations" element ={<Locations/>}/>

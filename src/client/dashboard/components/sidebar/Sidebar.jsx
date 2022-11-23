@@ -38,27 +38,28 @@ const Sidebar = () => {
               </Link>
           </li>
 
-          <li 
-          className = {currentLink === 2 ? "active" : ""}
-          onClick = {() => setCurrentLink(2)}
-          >
-          <Link to="/app/userslist">
-                <FiUsers />
-                <span> Users</span>
-              </Link>
-          </li>
-
 
           <li
-          className = {currentLink ===3 ? "active" : ""} 
-          onClick = {() =>setCurrentLink(3)}
+          className = {currentLink ===2 ? "active" : ""} 
+          onClick = {() =>setCurrentLink(2)}
           >
-          <Link to="/app/assessments">
+          <Link to="/app/assessmenttypes">
                 <BsBookmarkCheck />
                 <span> Assessments</span>
               </Link>
           </li>
-          
+
+          <li 
+          className = {currentLink === 3 ? "active" : ""}
+          onClick = {() => setCurrentLink(3)}
+          >
+          <Link to="/app/userslist">
+                <FiUsers />
+                <span> Candidates</span>
+              </Link>
+          </li>
+
+
           <li 
           className = {currentLink ===4 ? "active" : ""}
           onClick = {() => setCurrentLink(4)}

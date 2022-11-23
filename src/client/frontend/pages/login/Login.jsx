@@ -1,13 +1,12 @@
 import "./login.scss"
-import HeroVideo from '../../../common/video.mp4'
+
 import { NavLink } from 'react-router-dom'
 
 export default function Login() {
   return (
     
     <div className="login">
-    <video autoPlay loop muted id='video'>
-            <source src={HeroVideo} type='video/mp4'/>
+    <video >
         </video>
       <form className="loginform">
       <span className="logintitle">Login</span>

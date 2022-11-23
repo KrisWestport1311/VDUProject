@@ -76,7 +76,7 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
      
 
       <form 
-        className="loginform" 
+        className="loginform_1" 
         method="POST"
         action="/api/locations"
         onSubmit={handleSubmit}>
