@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Location = require("../models/Location")
 
 
+
 //Create new assessment location
 
 router.post("/", async (req, res, next) =>{
@@ -84,11 +85,19 @@ router.get("/", async (req, res, next) =>{
         const locations = await Location.find();
         res.status(200).json(locations)
 
+        
+
     } catch(err){
         next(err)
     }
 
 });
+
+
+
+
+
+
 
 
 module.exports = router;

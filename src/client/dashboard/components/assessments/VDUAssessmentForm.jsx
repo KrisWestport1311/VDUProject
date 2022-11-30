@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './vduassessmentform.scss'
-import AssessmentInfo from './AssessmentInfo'
+import AssessmentInfo from './AssessmentInfo.tsx'
 import Stage1 from './Stage1'
 import Stage2 from './Stage2'
 import Submit from './Submit'
@@ -22,7 +22,7 @@ function VDUAssessmentForm() {
     });
 
 
-    const FormTitles = ["VDU Assessment Info", "Stage 1", "Stage 2", "Submit"];
+    const FormTitles = ["VDU Assessment Info", "Display Screen", "Keyboard", "Submit"];
 
     const PageDisplay = () =>{              //creating a function called PageDisplay and telling it what to do. Calling it inside the body tag below
         if (page === 0) {

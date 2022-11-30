@@ -17,6 +17,7 @@ import VDUAssessmentForm from "./client/dashboard/components/assessments/VDUAsse
 
 
 
+
 function App() {
   return (
     
@@ -29,6 +30,8 @@ function App() {
                 <Route path ="users" element={<Users/>} />
                 <Route path ="register" element={<Register/>} />
                 <Route path ="vduassessment" element={<VDUAssessmentForm/>} />
+                <Route path ="assessmentinfo" element={<VDUAssessmentForm/>} />
+                
                 
                 
                 {/*start of nested route */}    

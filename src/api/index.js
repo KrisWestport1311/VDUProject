@@ -22,7 +22,9 @@ app.use(express.urlencoded({extended:true}))
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
-app.use("/api/locations", locationRoute)
+app.use("/api/locations", locationRoute);
+app.use("/api/locations/search", locationRoute);
+
 
 app.use((err, req, res, next)=>{
     const errorStatus = err.status || 500
