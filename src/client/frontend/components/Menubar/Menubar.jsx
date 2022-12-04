@@ -22,29 +22,22 @@ const Menubar = () => {
             <img src={Logo} alt="Focus Safety Logo"  className='logosize'/>
             
             <ul className={click ? 'nav active' : 'nav'}>
-              <li className='nav-item'>
+              {/*<li className='nav-item'>
                   <NavLink
                   to="/app/mainarea"
                   
                   >
                   Developer
                   </NavLink>
-              </li>    
+  </li> */}   
              
+              
               <li className='nav-item'>
                   <NavLink
-                  to="/app/mainarea"
+                  to="/contactus"
                   
                   >
-                  Developer3
-                  </NavLink>
-              </li> 
-              <li className='nav-item'>
-                  <NavLink
-                  to="/app/mainarea"
-                  
-                  >
-                  SIGN UP
+                  Contact Us
                   </NavLink>
               </li> 
               <li className='nav-item'>

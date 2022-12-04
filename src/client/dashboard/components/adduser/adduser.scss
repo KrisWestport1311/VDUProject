@@ -1,8 +1,4 @@
-.adduser_container {
-    margin-left: 16vw;
-    
-    height: 100%;
-}
+
 
 .register {
     height: 100%;
@@ -12,28 +8,23 @@
     align-items: center;
     background-color: var(--rollover);
 
-
-
 }
 
-.registerform {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #fff;
-    border-radius: 8px 4px;
-    padding: 5rem;
-    background-color: var(--secondary-bright);
+
 
     .registertitle {
-        font-size: 2.0rem;
-        color: var(--white)
+        font-size: 1.5rem;
+        color: var(--secondary-dark);
+        margin-bottom: 2rem;
+        font-weight:600;
+        
     }
 
     label {
         margin: 1rem 0;
         font-size: 1.5rem;
         color: var(--white);
+        width:60px;
     }
 
     input {
@@ -41,7 +32,7 @@
         background-color: #fff;
         margin-bottom: 1rem;
     }
-}
+
 
 .register_btn {
     padding: 17px 28px;
@@ -93,9 +84,7 @@
 }
 
 @media screen and (max-width:940px){
-    .adduser_container {
-            margin-left: 1px;
-    
-            height: 100%;
-        }
+    input{
+        width: 100%;
+    }
 }

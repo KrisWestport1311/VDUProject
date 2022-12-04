@@ -45,7 +45,7 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
 
   const validate =(values) =>{
     const errors = {}; 
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i; 
+     
     if(!values.username){
       errors.username="Location name is required"
     }
@@ -60,57 +60,53 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
   }; //validates the form by first taking the form value and reviewing value
 
   return (
-    
     <div className="login">
-     
-
-      <form 
-        className="loginform" 
+      <form
+        className="loginform_1"
         method="POST"
         action="/api/locations"
-        onSubmit={handleSubmit}>
-       
+        onSubmit={handleSubmit}
+      >
       
-
-        <label>User Name</label> 
-        <input 
-          type="text" 
-          name="username" 
-          placeholder="Enter name of new user" 
-          value={formValues.username} 
+      <div className="registertitle">Add New User</div>
+        <div>
+          <label>User Name</label>
+        </div>
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter name of new user"
+          value={formValues.username}
           onChange={handleChange}
         />
         <p>{formErrors.name}</p>
 
-        <label>Email address</label> 
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Enter e-mail address" 
-          value={formValues.email} 
+        <div>
+          <label>Email address</label>
+        </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter e-mail address"
+          value={formValues.email}
           onChange={handleChange}
         />
         <p>{formErrors.email}</p>
 
-        <label>Password</label> 
-        <input 
-          type="password" 
-          name="password" 
-          placeholder="Enter password" 
-          value={formValues.password} 
+        <div>
+          <label>Password</label>
+        </div>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter password"
+          value={formValues.password}
           onChange={handleChange}
         />
         <p>{formErrors.password}</p>
-  
 
-        
-
-        <button className="login_btn">Save New User</button>   
-         
+        <button className="login_btn">Save New User</button>
       </form>
-        
-        
-
     </div>
-  )
+  );
 }

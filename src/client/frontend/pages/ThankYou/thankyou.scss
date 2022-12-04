@@ -1,0 +1,15 @@
+.tf_container {
+  width: 100%;
+  border-radius: 4px 8px;
+  text-align: center;
+  padding: 3rem 1rem;
+
+  .tf_content{
+    max-width: 1140px;
+    margin: auto;
+    background-color:var(--background);
+    padding: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+}

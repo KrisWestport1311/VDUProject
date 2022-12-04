@@ -1,80 +1,100 @@
-import React, {useState, useEffect} from "react";
-import { Link } from 'react-router-dom';
-import axios from "axios"
-import './locations.scss' ;
-
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./locations.scss";
+import { AiOutlineSearch } from "react-icons/ai";
+import { VscAdd } from "react-icons/vsc";
+import { TbEdit } from "react-icons/tb";
+import { MdDeleteOutline } from "react-icons/md";
 
 function Locations() {
+  const [query, setQuery] = useState("");
 
-  const [users,setUser] = useState([]); //setUser to empty array
+  const [locations, setLocation] = useState([]); //setUser to empty array
 
   //use the useEffect hook to call the getUSers function below
 
-  useEffect (() =>{
-    getUsers();
+  useEffect(() => {
+    getLocations();
   }, []);
-
-
 
   //create function to retrieve data all data from the API
 
-  const getUsers = async() => {
-    const response = await axios.get('http://localhost:5000/api/locations');
-    setUser(response.data);
-  }
-
-
+  const getLocations = async () => {
+    const response = await axios.get("http://localhost:5000/api/locations");
+    setLocation(response.data);
+  };
 
   return (
-    <div className='locations_container'>
-    
-    <table className='table'>
-      <thead>
-      <tr>
-        <th>No</th>
-        <th>Address</th>
-        <th>County</th>
-        <th>Contact Person</th>
-        <th>Phone Number</th>
-        <th>Actions</th>
-       
+    <div className="locations_container">
+      <div className="user_title">
+        <div>LOCATIONS</div>
 
-        
-       </tr> 
-      </thead>
-      <tbody>
-      {users.map((user, index)=>(
-          <tr key={user._id}>
-          <td>{index +1}</td>
-          <td>{user.address}</td>
-          <td>{user.county}</td>
-          <td>{user.contactperson}</td>
-          <td>{user.phonenumber}</td>
-          
-          <td className="btn-group">
-            <Link
-            to={`/app/edituser/${user._id}`} 
-            className="btn btn-outline">Edit
-            </Link>
-            <button className="btn">Delete</button>
-          </td>
-        </tr>
-      ))}
-        
-        
-      </tbody>
-    </table>
-    
-    
-          
-          <Link to="/app/locationsform">
-                
-                <button className="btn btn-outline">Add New Location</button>
-              </Link>
-         
+        <div className="user_search">
+          <AiOutlineSearch style={{ color: "var(--secondary-dark)" }} />
+          <input
+            type="text"
+            placeholder="Search by Location Name "
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
+
+        <div className="add_user">
+          <Link to="/app/locationsform" title="Add New Location">
+            <VscAdd className="userlist_icon" />
+          </Link>
+        </div>
+      </div>
+
+      <table className="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>County</th>
+            <th>Contact Person</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {locations
+            .filter((location) => location.name.includes(query))
+            .map((location, index) => (
+              <tr key={location._id}>
+                <td>{index + 1}</td>
+                <td>{location.name}</td>
+                <td>{location.address}</td>
+                <td>{location.county}</td>
+                <td>{location.contactperson}</td>
+                <td>{location.phonenumber}</td>
+
+                <td>
+                  <Link
+                    to={`/app/edituser/${location._id}`}
+                    title="Edit Location"
+                  >
+                    <TbEdit />
+                  </Link>
+
+                  <Link
+                    to={`/app/edituser/${location._id}`}
+                    title="Delete user"
+                  >
+                    <MdDeleteOutline />
+                  </Link>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+
+      <Link to="/app/locationsform">
+        <button className="btn btn-outline">Add New Location</button>
+      </Link>
     </div>
-    
-  )
+  );
 }
 
-export default Locations
+export default Locations;

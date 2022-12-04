@@ -1,5 +1,5 @@
 import "./locationsform.scss"
-import { NavLink } from 'react-router-dom'
+
 import { useState, useEffect } from "react";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
@@ -71,99 +71,110 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
   }; //validates the form by first taking the form value and reviewing value
 
   return (
-    
     <div className="login">
-     
-
-      <form 
-        className="loginform_1" 
+      <form
+        className="loginform_1"
         method="POST"
         action="/api/locations"
-        onSubmit={handleSubmit}>
-       {Object.keys(formErrors).length === 0 && isSubmit ? 
-        (<span className="logintitle">New Location Created</span>) : 
-        (<span className="logintitle">Create New Location</span>)}
-      
+        onSubmit={handleSubmit}
+      >
+        {Object.keys(formErrors).length === 0 && isSubmit ? (
+          <span className="logintitle">New Location Created</span>
+        ) : (
+          <span className="logintitle">Create New Location</span>
+        )}
 
-        <label>Name</label> 
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="Enter name of new location" 
-          value={formValues.name} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.name}</p>
+        <div className="form_container">
+          <div className="form_lhs">
+            <div>
+              <label>Name</label>
+            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter name of new location"
+              value={formValues.name}
+              onChange={handleChange}
+            />
+            <p>{formErrors.name}</p>
 
-        <label>Address</label> 
-        <input 
-          type="text" 
-          name="address" 
-          placeholder="Enter address of new location " 
-          value={formValues.address} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.address}</p>
+            <div>
+              <label>Address</label>
+            </div>
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter address of new location "
+              value={formValues.address}
+              onChange={handleChange}
+            />
+            <p>{formErrors.address}</p>
 
-        <label>County</label> 
-        <input 
-          type="text" 
-          name="county" 
-          placeholder="Enter county of new location" 
-          value={formValues.county} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.county}</p>
+            <div>
+              <label>County</label>
+            </div>
+            <input
+              type="text"
+              name="county"
+              placeholder="Enter county of new location"
+              value={formValues.county}
+              onChange={handleChange}
+            />
+            <p>{formErrors.county}</p>
 
-        <label>Contact Person</label> 
-        <input 
-          type="text" 
-          name="contactperson" 
-          placeholder="Contact person name at new location" 
-          value={formValues.contactperson} 
-          onChange={handleChange} 
-        />
-        <p>{formErrors.contactperson}</p>
+            <div>
+              <label>Contact Person</label>
+            </div>
+            <input
+              type="text"
+              name="contactperson"
+              placeholder="Contact person name at new location"
+              value={formValues.contactperson}
+              onChange={handleChange}
+            />
+            <p>{formErrors.contactperson}</p>
+          </div>
+          <div className="form_rhs">
+            <div>
+              <label>Work Title</label>
+            </div>
+            <input
+              type="text"
+              name="title"
+              placeholder="Job title of contact person"
+              value={formValues.title}
+              onChange={handleChange}
+            />
+            <p>{formErrors.title}</p>
 
-        <label>Work Title</label> 
-        <input 
-          type="text" 
-          name="title" 
-          placeholder="Job title of contact person" 
-          value={formValues.title} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.title}</p>
+            <div>
+              <label>Phone Number</label>
+            </div>
+            <input
+              type="tel"
+              name="phonenumber"
+              placeholder="Enter new location phone number"
+              value={formValues.phonenumber}
+              onChange={handleChange}
+            />
+            <p>{formErrors.phonenumber}</p>
 
-        <label>Phone Number</label> 
-        <input 
-          type="tel" 
-          name="phonenumber" 
-          placeholder="Enter new location phone number" 
-          value={formValues.phonenumber} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.phonenumber}</p>
+            <div>
+              <label>E-mail address</label>
+            </div>
+            <input
+              type="email"
+              name="emailaddress"
+              placeholder="Enter new location e-mail address"
+              value={formValues.emailaddress}
+              onChange={handleChange}
+            />
+            <p>{formErrors.emailaddress}</p>
 
-        <label>E-mail address</label> 
-        <input 
-          type="email" 
-          name="emailaddress" 
-          placeholder="Enter new location e-mail address" 
-          value={formValues.emailaddress} 
-          onChange={handleChange}
-        /> 
-        <p>{formErrors.emailaddress}</p>
-
-        <button className="login_btn">Submit New Location</button>   
-         
+            <button className="login_btn">Submit New Location</button>
+          </div>
+        </div>
       </form>
-        
-        <NavLink 
-        to="/"
-        className="login_btn login_btn_reg">
-        Home</NavLink> 
-
     </div>
-  )
+  );
 }

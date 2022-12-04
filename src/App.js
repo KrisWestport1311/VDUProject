@@ -14,6 +14,9 @@ import Userslist from "./client/dashboard/components/userslist/Userslist";
 import AddUser from "./client/dashboard/components/adduser/AddUser";
 import EditUser from "./client/dashboard/components/edituser/EditUser";
 import VDUAssessmentForm from "./client/dashboard/components/assessments/VDUAssessmentForm";
+import ContactForm from "./client/frontend/components/ContactForm/ContactForm";
+import ContactFormPage from "./client/frontend/components/ContactForm/ContactFormPage";
+import ThankYou from "./client/frontend/pages/ThankYou/ThankYou";
 
 
 
@@ -31,6 +34,9 @@ function App() {
                 <Route path ="register" element={<Register/>} />
                 <Route path ="vduassessment" element={<VDUAssessmentForm/>} />
                 <Route path ="assessmentinfo" element={<VDUAssessmentForm/>} />
+                
+                <Route path ="contactus" element={<ContactFormPage/>} />
+                <Route path ="thankyou" element={<ThankYou/>} />
                 
                 
                 

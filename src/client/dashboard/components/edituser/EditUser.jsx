@@ -60,61 +60,54 @@ if(Object.keys(formErrors).length === 0 && isSubmit){
   }; //validates the form by first taking the form value and reviewing value
 
   return (
-    
-    <div className="login">
-     
-
-      <form 
-        className="loginform" 
+    <div className="eu_container">
+      <form
+        className="loginform_1"
         method="PUT"
         action="/api/users"
-        onSubmit={handleSubmit}>
-       
-      
+        onSubmit={handleSubmit}
+      >
+        <div className="registertitle">Edit Existing Location</div>
+          <div>
+            <label>Edit Existing User</label>
+          </div>
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter new name for user"
+            value={formValues.username}
+            onChange={handleChange}
+          />
+          <p>{formErrors.name}</p>
+
+          <div>
+            <label>Email address</label>
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter new e-mail address for user"
+            value={formValues.email}
+            onChange={handleChange}
+          />
+          <p>{formErrors.email}</p>
+
+          <div>
+            <label>Password</label>
+          </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter new password"
+            value={formValues.password}
+            onChange={handleChange}
+          />
+          <p>{formErrors.password}</p>
+          <button className="login_btn">Update User</button>
         
-        
-
-        <label>Edit Existing User</label> 
-        <input 
-          type="text" 
-          name="username" 
-          placeholder="Enter new name for user" 
-          value={formValues.username} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.name}</p>
-
-        <label>Email address</label> 
-        <input 
-          type="email" 
-          name="email" 
-          placeholder="Enter new e-mail address for user" 
-          value={formValues.email} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.email}</p>
-
-        <label>Password</label> 
-        <input 
-          type="password" 
-          name="password" 
-          placeholder="Enter new password" 
-          value={formValues.password} 
-          onChange={handleChange}
-        />
-        <p>{formErrors.password}</p>
-  
-
-        
-
-        <button className="login_btn">Update User</button>   
-         
       </form>
-        
-        
-
     </div>
-  )
+  );
 }
 
 
