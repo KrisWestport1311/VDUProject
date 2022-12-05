@@ -6,6 +6,9 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { VscAdd } from "react-icons/vsc";
 import { TbEdit } from "react-icons/tb";
 import { MdDeleteOutline } from "react-icons/md";
+import { FiDownload } from "react-icons/fi";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
 function Locations() {
   const [query, setQuery] = useState("");
@@ -23,6 +26,14 @@ function Locations() {
   const getLocations = async () => {
     const response = await axios.get("http://localhost:5000/api/locations");
     setLocation(response.data);
+  };
+
+  //download data from table in pdf format
+
+  const downloadData = () => {
+    const pdf = new jsPDF();
+    pdf.autoTable({ html: "#table" });
+    pdf.save("locationlist.pdf");
   };
 
   return (
@@ -43,10 +54,11 @@ function Locations() {
           <Link to="/app/locationsform" title="Add New Location">
             <VscAdd className="userlist_icon" />
           </Link>
+          <FiDownload title="Download location list" onClick={downloadData} />
         </div>
       </div>
 
-      <table className="table">
+      <table className="table" id="table">
         <thead>
           <tr>
             <th>No</th>

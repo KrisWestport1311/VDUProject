@@ -6,6 +6,9 @@ import { VscAdd } from "react-icons/vsc";
 import { TbEdit } from "react-icons/tb";
 import { MdDeleteOutline } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
+import { FiDownload } from "react-icons/fi";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
 function Userslist() {
   const [query, setQuery] = useState("");
@@ -25,6 +28,14 @@ function Userslist() {
     setUser(response.data);
   };
 
+  //download data from table in pdf format
+
+   const downloadData = () => {
+     const pdf = new jsPDF();
+     pdf.autoTable({ html: "#table" });
+     pdf.save("userlist.pdf");
+   };
+
   return (
     <div className="users_container">
       <div className="user_title">
@@ -43,10 +54,11 @@ function Userslist() {
           <Link to="/app/adduser" title="Add New User">
             <VscAdd className="userlist_icon" />
           </Link>
+          <FiDownload title="Download candidate list" onClick={downloadData} />
         </div>
       </div>
 
-      <table className="table">
+      <table className="table" id="table">
         <thead>
           <tr>
             <th>No</th>
@@ -57,8 +69,7 @@ function Userslist() {
         </thead>
         <tbody>
           {users
-            .filter((user) => user.username.
-            includes(query))
+            .filter((user) => user.username.includes(query))
             .map((user, index) => (
               <tr key={user._id}>
                 <td>{index + 1}</td>
@@ -72,6 +83,7 @@ function Userslist() {
                   <Link to={`/app/edituser/${user._id}`} title="Delete user">
                     <MdDeleteOutline />
                   </Link>
+                  
                 </td>
               </tr>
             ))}
