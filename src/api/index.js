@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const locationRoute = require("./routes/locations.js")
+const assessmentRoute = require("./routes/assessments.js")
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({extended:true}))
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/locations", locationRoute);
+app.use("/api/assessments", assessmentRoute);
 app.use("/api/locations/search", locationRoute);
 
 

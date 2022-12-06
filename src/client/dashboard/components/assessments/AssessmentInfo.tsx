@@ -30,12 +30,14 @@ function AssessmentInfo({ formData, setFormData }) {
     <div className="assessment_container">
       <div style={divStyle}>
         <AutoCompleteComponent
-          placeholder="Enter Existing Username"
+          placeholder="Choose Existing Location"
           dataSource={remoteData}
           query={dataQuery}
           fields={remoteFields}
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          value={formData.location}
+          onChange={(e) =>
+            setFormData({ ...formData, location: e.target.value })
+          }
         ></AutoCompleteComponent>
 
         <Link to="/app/adduser" title="Add New User">
@@ -45,12 +47,14 @@ function AssessmentInfo({ formData, setFormData }) {
 
       <div style={divStyle}>
         <AutoCompleteComponent
-          placeholder="Choose Existing Location"
+          placeholder="Enter Existing Username"
           dataSource={remoteData}
           query={dataQuery}
           fields={remoteFields}
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          value={formData.candidate}
+          onChange={(e) =>
+            setFormData({ ...formData, candidate: e.target.value })
+          }
         ></AutoCompleteComponent>
 
         <Link to="/app/locationsform" title="Add New Location">

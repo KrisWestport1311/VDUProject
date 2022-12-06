@@ -6,19 +6,19 @@ function Submit({formData, setFormData}) {
     <div className='submit_container'>
       <input 
         type="text"
-        placeholder="Enter your submit details"
-        value={formData.submit1}
+        placeholder="Is the seat height adjustable?"
+        value={formData.height}
         onChange={(e) =>
-          setFormData({...formData, submit1: e.target.value})
+          setFormData({...formData, height: e.target.value})
         }
         />
 
       <input 
         type="text"
-        placeholder="Enter your submit details 2"
-        value={formData.submit2}
+        placeholder="Can employee place both feet on floor?"
+        value={formData.feet}
         onChange={(e) =>
-          setFormData({...formData, submit2: e.target.value})
+          setFormData({...formData, feet: e.target.value})
         }
         />
         

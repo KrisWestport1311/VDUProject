@@ -80,14 +80,15 @@ function ContactFormPage() {
                 placeholder="Enter your email here"
               />
             </div>
-
+            <p>Your message</p>
             <div className="input_message">
               <textarea name="message" />
             </div>
 
             <div className="input_button">
               <button type="submit">Send</button>
-              <Link to="/" title="Return Home"><br/>
+              <Link to="/" title="Return Home">
+                <br />
                 <BiHome className="userlist_icon" />
               </Link>
             </div>

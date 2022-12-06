@@ -75,7 +75,6 @@ const sendEmail = (e) => {
                 placeholder="Enter your name here"
               />
             </div>
-
             <div className="input_box">
               <input
                 type="email"
@@ -83,12 +82,10 @@ const sendEmail = (e) => {
                 placeholder="Enter your email here"
               />
             </div>
-
+            <p>Your message</p>
             <div className="input_message">
-              <textarea 
-                name="message" />
+              <textarea name="message" />
             </div>
-
             <div className="input_button">
               <button type="submit">Send</button>
             </div>

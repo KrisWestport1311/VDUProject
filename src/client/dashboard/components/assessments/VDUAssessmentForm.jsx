@@ -7,24 +7,32 @@ import Submit from './Submit'
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
 
+
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+
 function VDUAssessmentForm() {
 
     const [page, setPage] = useState(0);  //variable to keep track of which step of form we are in, starting at 0 or very first step
 
     const [formData, setFormData] = useState({
-        email: "",
-        password:"",
-        stage11:"",
-        stage12:"",
-        stage21:"",
-        stage22:"",
-        submit1:"",
-        submit2:"",
+        location: "",
+        candidate:"",
+        characters:"",
+        size:"",
+        symbols:"",
+        reflective:"",
+        height:"",
+        feet:"",
 
     });
 
+    const navigate = useNavigate();
 
-    const FormTitles = ["VDU Assessment Info", "Display Screen", "Keyboard", "Submit"];
+    const [isSubmit, setIsSubmit] = useState(false);
+
+    const FormTitles = ["VDU Assessment Info", "Display Screen", "Keyboard", "Work Chair"];
 
     const PageDisplay = () =>{              //creating a function called PageDisplay and telling it what to do. Calling it inside the body tag below
         if (page === 0) {
@@ -83,8 +91,12 @@ function VDUAssessmentForm() {
               className="svg"
               onClick={() => {
                 if (page === FormTitles.length - 1) {
-                  alert("Form Submitted");
-                  console.log(formData);
+                  //alert("Form Submitted");
+                  //console.log(formData);
+                  
+                  setIsSubmit(true);
+                  axios.post("http://localhost:5000/api/assessments", formData);
+                  navigate("/app/assessmentlist");
                 } else {
                   setPage((currPage) => currPage + 1);
                 }

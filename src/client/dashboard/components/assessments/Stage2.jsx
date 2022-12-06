@@ -9,16 +9,16 @@ function Stage2({formData, setFormData}) {
 
       <input
         type="text"
-        placeholder="Enter your third step details"
-        value={formData.stage21}
-        onChange={(e) => setFormData({ ...formData, stage21: e.target.value })}
+        placeholder="Are the keyboard symbols easy to read?"
+        value={formData.symbols}
+        onChange={(e) => setFormData({ ...formData, symbols: e.target.value })}
       />
 
       <input
         type="text"
-        placeholder="Enter your third step details 2"
-        value={formData.stage22}
-        onChange={(e) => setFormData({ ...formData, stage22: e.target.value })}
+        placeholder="Is the keyboard non-reflective?"
+        value={formData.reflective}
+        onChange={(e) => setFormData({ ...formData, reflective: e.target.value })}
       />
     </div>
   );

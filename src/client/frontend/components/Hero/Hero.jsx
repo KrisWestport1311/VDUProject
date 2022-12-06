@@ -21,7 +21,7 @@ const Hero = () => {
             className="btn">Log In </NavLink> 
                      
             <NavLink 
-            to="/contact" 
+            to="/contactus" 
             className="btn btn-outline">Send a Message </NavLink>          
           </div>
         </div>
