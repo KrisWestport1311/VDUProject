@@ -87,6 +87,8 @@ router.get("/", async (req, res, next) =>{
 
         
 
+        
+
     } catch(err){
         next(err)
     }
@@ -94,7 +96,7 @@ router.get("/", async (req, res, next) =>{
 });
 
 
-
+//Get all locations for vdu assessment form
 
 
 

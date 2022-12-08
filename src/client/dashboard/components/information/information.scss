@@ -1,5 +1,89 @@
-.info_container{
+.infopg {
+  margin-left: 16vw;
+  padding: 2rem;
+  height: 100%;
+  text-align: center;
+
+  .infotitle{
+    font-size: larger;
+    font-weight: 600;
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 4px 8px;
+    
+  }
+
+  .assesm_container {
+    margin: auto;
+    
+    border-radius: 8px 4px;
+    padding: 1rem;
+  }
+
+  .assesm_card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .infopg_card {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 0px 20px;
+    border: 1px solid var(--secondary-bright);
+    margin: auto;
+    background-color: var(--white);
+    width: 280px;
+  }
+
+  .infopg_card:hover{
+    transform: scale(1.03);
+    transition: 0.03s ease-in-out;
+    border: 2px solid var(--secondary-bright);
+  }
+
+  .spacer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (max-width: 1540px) {
+  .infopg {
     margin-left: 16vw;
-    padding: 2rem;
-    height: 100%;
+
+    
+
+    .assesm_card_container {
+      grid-template-columns: repeat(2, 1fr);
+     
+
+      .assesm_card {
+        height: fit-content;
+      }
+    }
+  }
+
+@media screen and (max-width: 940px) {
+  .infopg {
+    margin-left: 1vw !important;
+
+    .assesm_card_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+  @media screen and (max-width: 660px) {
+    .assesm_card_container {
+      grid-template-columns: 1fr !important;
+    }
+  }
 }

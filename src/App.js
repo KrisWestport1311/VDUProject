@@ -15,7 +15,6 @@ import AddUser from "./client/dashboard/components/adduser/AddUser";
 import EditUser from "./client/dashboard/components/edituser/EditUser";
 import EditUser1 from "./client/dashboard/components/edituser/EditUser1";
 import VDUAssessmentForm from "./client/dashboard/components/assessments/VDUAssessmentForm";
-import ContactForm from "./client/frontend/components/ContactForm/ContactForm";
 import ContactFormPage from "./client/frontend/components/ContactForm/ContactFormPage";
 import ThankYou from "./client/frontend/pages/ThankYou/ThankYou";
 import AssessmentList from "./client/dashboard/components/assessmentlist/AssessmentList";

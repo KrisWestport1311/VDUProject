@@ -11,6 +11,9 @@ import Img4 from "../../../common/images/AImg4.png";
 function AssessmentTypes() {
   return (
     <div className="assesm">
+      <div className="assesm_title">
+        Welcome to our assessments area where you will be able to carry out guided assessment types.
+      </div>
       <div className="assesm_container">
         <div className="assesm_card_container">
           <div className="assesm_card">
