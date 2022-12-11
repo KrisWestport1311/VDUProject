@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const verifytoken = require("../../verifyToken");
+
 
 //Get all users
 router.get("/", async (req, res, next) => {
@@ -13,8 +15,8 @@ router.get("/", async (req, res, next) => {
 });
 
 //Update existing user
-router.put("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id) {
+router.put("/:id", verifytoken, async (req, res, next) => {
+  if (req.body.userId === req.params.userId) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
       req.body.password = await bcrypt.hash(req.body.password, salt);
@@ -39,8 +41,8 @@ router.put("/:id", async (req, res) => {
 
 //Delete existing user
 
-router.delete("/:id", async (req, res) => {
-  if (req.body.userId === req.params.id) {
+router.delete("/:id", verifytoken, async (req, res) => {
+  if (req.body.userId === req.params.userId) {
     try {
       const user = await User.findById(req.params.id);
 
@@ -60,7 +62,19 @@ router.delete("/:id", async (req, res) => {
 
 //Get a Specific User
 
-router.get("/:Id", async (req, res) => {
+router.get("/find/:Id", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.Id);
+    const { password, ...others } = user._doc;
+    res.status(200).json(others);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+//get count of users
+router.get("/find/:Id", async (req, res) => {
   try {
     const user = await User.findById(req.params.Id);
     const { password, ...others } = user._doc;

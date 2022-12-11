@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 export default function Login() {
   return (
     
-    <div className="login">
+    <div className="login_container">
     <video >
         </video>
       <form className="loginform">

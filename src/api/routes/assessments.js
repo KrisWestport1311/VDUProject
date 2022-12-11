@@ -28,15 +28,15 @@ router.post("/", async (req, res, next) => {
 //   }
 // });
 
-//Delete an existing location
-// router.delete("/:id", async (req, res, next) => {
-//   try {
-//     await Location.findByIdAndDelete(req.params.id);
-//     res.status(200).json("Location has been deleted");
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+//Delete an existing assessment
+router.delete("/:id", async (req, res, next) => {
+  try {
+    await Assessment.findByIdAndDelete(req.params.id);
+    res.status(200).json("Assessment has been deleted");
+  } catch (err) {
+    next(err);
+  }
+});
 
 // //Get specific location
 // router.get("/:id", async (req, res, next) => {

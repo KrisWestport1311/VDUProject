@@ -7,6 +7,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const locationRoute = require("./routes/locations.js")
 const assessmentRoute = require("./routes/assessments.js")
+const cookieparser = require("cookie-parser");
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ mongoose
 
 //middlewares
 app.use(cors())
+app.use(cookieparser())
 app.use(express.json()); //so you can send json object to express server
 app.use(express.urlencoded({extended:true}))
 
@@ -30,7 +32,7 @@ app.use("/api/locations/search", locationRoute);
 
 app.use((err, req, res, next)=>{
     const errorStatus = err.status || 500
-    const errorMessage = err.message || "There is an issue"
+    const errorMessage = err.message || "There is an issue";
     return res.status(errorStatus).json({
         success: false,
         status: errorStatus,
