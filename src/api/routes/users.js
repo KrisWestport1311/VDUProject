@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
-const verifytoken = require("../../verifyToken");
+
 
 
 //Get all users
@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
 });
 
 //Update existing user
-router.put("/:id", verifytoken, async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   if (req.body.userId === req.params.userId) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
@@ -41,7 +41,7 @@ router.put("/:id", verifytoken, async (req, res, next) => {
 
 //Delete existing user
 
-router.delete("/:id", verifytoken, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   if (req.body.userId === req.params.userId) {
     try {
       const user = await User.findById(req.params.id);
