@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../../common/images/FSLOGOportrait.png'
 import './sidebar.scss'
 import {FiUsers, FiLogOut} from 'react-icons/fi'
@@ -8,14 +8,28 @@ import {BsBookmarkCheck} from 'react-icons/bs'
 import {BsBook} from 'react-icons/bs'
 import {AiOutlineMenu, AiOutlineCloseCircle} from 'react-icons/ai'
 import {BiBarChartSquare} from "react-icons/bi";
+import { useSelector } from "react-redux";
+import { logout } from '../../../../redux/userSlice';
+import { useDispatch } from "react-redux";
 
 
 
 const Sidebar = () => {
 
+  const name = useSelector((state) => state.user.currentUser.username);
+
   const [currentLink, setCurrentLink] = useState ();
   const [navbarState, setNavbarState] = useState(false);
-  const handleClick =() => setNavbarState(!navbarState)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick =() => setNavbarState(!navbarState);
+
+  const handleLogout =(e)=>{
+    e.preventDefault();
+    dispatch(logout)
+    navigate("/");
+  }
 
   return (
     <>
@@ -84,14 +98,14 @@ const Sidebar = () => {
 
          
 
-          <li className="logout">
+          <button className="logout" onClick={handleLogout}>
           
         <a href="/">
           <FiLogOut /> 
-          <span >Log Out</span>
+          <span >Log Out {name}</span>
         </a>
       
-          </li>
+          </button>
         
         </ul>  
         

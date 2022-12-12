@@ -25,7 +25,7 @@ try{
   navigate("/app/mainarea");
 } catch(err){
   dispatch(loginFailure()) //if there is an error
-  alert("Wrong details entered");
+  alert("Wrong details entered. Please try again");
 }
   }
   return (
