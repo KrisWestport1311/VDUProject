@@ -15,7 +15,7 @@ function Userslist() {
 
   const [users, setUser] = useState([]); //setUser to empty array
 
-  //use the useEffect hook to call the getUSers function below
+  //use the useEffect hook to call the getUsers function below
 
   useEffect(() => {
     getUsers();

@@ -1,25 +1,68 @@
 import './analytics.scss'
 import {BsFillBarChartFill, BsFillGeoFill, BsFillPersonFill, BsCalendar3} from 'react-icons/bs';
 import Analyticscard from '../analyticscard/Analyticscard'
+import { useState } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
+
+
 
 const Analytics = () => {
+
+    const [count, setCount] = useState("")
+    const [alocations, setAlocations] = useState("")
+    const [ausers, setAusers] = useState("")
+
+
+    useEffect(()=>{
+      getCount();
+    }, []);
+
+    useEffect(()=>{
+      getAlocations();
+    }, []);
+
+    useEffect(()=>{
+      getAusers();
+    }, []);
+
+    const getCount = async ()=>{
+      const response = await axios.get("http://localhost:5000/api/assessments")
+      
+      setCount(response.data.length)
+    };
+
+    const getAlocations = async ()=>{
+      const response = await axios.get("http://localhost:5000/api/locations");
+      
+      setAlocations(response.data.length)
+    };
+
+    const getAusers = async ()=>{
+      const response = await axios.get("http://localhost:5000/api/users/");
+      
+      setAusers(response.data.length)
+    };
+
+
+
   return (
     <div className="analytics_container">
       
         <div> 
         <Analyticscard 
-        heading='Assessments this month'
-        value='24' 
+        heading='Assessments completed'
+        value={count} 
         icon={<BsFillBarChartFill/>}/></div>
 
         <div> <Analyticscard 
-        heading='Locations this month'
-        value='25' 
+        heading='Locations assessed'
+        value={alocations} 
         icon={<BsFillGeoFill/>}/></div>
 
         <div> <Analyticscard 
         heading='Users in total'
-        value='324' 
+        value={ausers} 
         icon={<BsFillPersonFill/>}/></div>
 
         <div> <Analyticscard 
