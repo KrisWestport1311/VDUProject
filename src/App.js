@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 
-import DashboardHome from "./client/dashboard/pages/Dashboardhome/DashboardHome";
+import DashboardHome from "./client/dashboard/pages/dashboardhome/DashboardHome";
 import Users from "./client/dashboard/pages/users/Users";
 import Home from "./client/frontend/pages/Home/Home";
 import Login from "./client/frontend/pages/login/Login";
@@ -18,9 +18,6 @@ import VDUAssessmentForm from "./client/dashboard/components/assessments/VDUAsse
 import ContactFormPage from "./client/frontend/components/ContactForm/ContactFormPage";
 import ThankYou from "./client/frontend/pages/ThankYou/ThankYou";
 import AssessmentList from "./client/dashboard/components/assessmentlist/AssessmentList";
-
-
-
 
 function App() {
   return (
