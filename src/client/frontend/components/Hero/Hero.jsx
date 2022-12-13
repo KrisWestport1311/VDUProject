@@ -9,7 +9,7 @@ const Hero = () => {
         </video>
 
         <div className="herotxt">
-          <h1 style={{color: "var(--secondary-dark)"}}>Digital Workstation Assessments</h1>
+          <h1 style={{color: "var(--secondary-dark)"}}>Digital Workstation Assessments1</h1>
           <h2 style={{color: "var(--white)"}}>Remote Assessment Solution</h2>
           
 
