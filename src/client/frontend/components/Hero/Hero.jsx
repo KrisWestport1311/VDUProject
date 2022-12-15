@@ -12,7 +12,7 @@ const Hero = () => {
         <h1 style={{ color: "var(--secondary-dark)" }}>
           Digital Workstation Assessments
         </h1>
-        <h2 style={{ color: "var(--white)" }}>Remote Assessment Solution</h2>
+        <h2 style={{ color: "var(--white)" }}>Remote Assessment Solution1</h2>
 
         <div className="btn-group">
           <NavLink to="/login" className="btn">
