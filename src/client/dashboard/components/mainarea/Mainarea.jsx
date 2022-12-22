@@ -25,7 +25,7 @@ const Mainarea = () => {
           <Test />
           <Assessmenttypes />
           <Equipment />
-          <Discomfort />
+          
         </div>
       </div>
     </div>
