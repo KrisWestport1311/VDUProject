@@ -42,7 +42,7 @@ const Menubar = () => {
               </li> 
               <li className='nav-item'>
                   <NavLink
-                  to="/app/mainarea"
+                  to="/login"
                   className='btn'
                   >
                   Log In
